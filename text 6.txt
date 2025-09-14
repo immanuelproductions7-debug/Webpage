@@ -1,0 +1,4 @@
+function logout() {
+  alert("You have left the throne room. Farewell, noble one.");
+  window.location.href = "index.html";
+}

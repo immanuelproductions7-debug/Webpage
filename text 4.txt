@@ -1,0 +1,20 @@
+import { getDatabase, ref, onValue, set } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-database.js";
+
+const db = getDatabase();
+const bidRef = ref(db, "auctions/throne-chair/currentBid");
+
+onValue(bidRef, (snapshot) => {
+  const bid = snapshot.val();
+  document.getElementById("currentBid").textContent = bid;
+});
+
+window.placeBid = function () {
+  const newBid = parseInt(document.getElementById("newBid").value);
+  const current = parseInt(document.getElementById("currentBid").textContent);
+  if (newBid > current) {
+    set(bidRef, newBid);
+    alert("Your bid has been placed. May fortune favor your throne!");
+  } else {
+    alert("Your offer must exceed the current bid.");
+  }
+};

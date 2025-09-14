@@ -1,0 +1,24 @@
+import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js";
+import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js";
+
+const firebaseConfig = {
+  apiKey: "YOUR_API_KEY",
+  authDomain: "dynasty-mercantile.firebaseapp.com",
+  projectId: "dynasty-mercantile",
+  storageBucket: "dynasty-mercantile.appspot.com",
+  messagingSenderId: "YOUR_SENDER_ID",
+  appId: "YOUR_APP_ID"
+};
+
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
+
+document.getElementById("loginForm").addEventListener("submit", (e) => {
+  e.preventDefault();
+  const email = email.value;
+  const password = password.value;
+
+  signInWithEmailAndPassword(auth, email, password)
+    .then(() => window.location.href = "dashboard.html")
+    .catch(() => alert("Access denied. Check your credentials."));
+});

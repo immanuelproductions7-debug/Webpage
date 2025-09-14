@@ -1,0 +1,16 @@
+function startCountdown(duration, display) {
+  let timer = duration;
+  setInterval(() => {
+    const hours = Math.floor(timer / 3600);
+    const minutes = Math.floor((timer % 3600) / 60);
+    const seconds = timer % 60;
+    display.textContent = `${hours}h ${minutes}m ${seconds}s`;
+    if (--timer < 0) display.textContent = "Auction Ended";
+  }, 1000);
+}
+
+window.onload = () => {
+  const timeLeft = document.getElementById("time-left");
+  const auctionDuration = 2 * 3600 + 14 * 60;
+  startCountdown(auctionDuration, timeLeft);
+};

@@ -1,0 +1,5 @@
+document.querySelectorAll('.bid-button').forEach(button => {
+  button.addEventListener('click', () => {
+    alert("Your bid has been placed. May fortune favor your throne!");
+  });
+});

@@ -1,0 +1,8 @@
+document.querySelectorAll('.fa-crown').forEach(icon => {
+  icon.addEventListener('mouseenter', () => {
+    icon.style.textShadow = '0 0 10px #FFD700, 0 0 20px #FFD700';
+  });
+  icon.addEventListener('mouseleave', () => {
+    icon.style.textShadow = 'none';
+  });
+});
