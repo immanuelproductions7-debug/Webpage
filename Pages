@@ -1,1 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DYNASTY MERCANTILE</title>
+  <link rel="stylesheet" href="../styles/main.css" />
+  <link rel="icon" href="../assets/images/favicon.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Lato&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <header class="hero">
+    <div class="logo">👑 DYNASTY MERCANTILE</div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="auctions.html">Auctions</a></li>
+        <li><a href="login.html">Login</a></li>
+      </ul>
+    </nav>
+    <h1>Bid for the Throne. Own the Legacy.</h1>
+    <p>Where furniture reigns supreme.</p>
+    <a href="auctions.html" class="cta-button">Explore Auctions</a>
+  </header>
+
+  <section class="featured">
+    <h2>Featured Royal Pieces</h2>
+    <div class="items">
+      <div class="item-card">
+        <img src="../assets/images/throne-chair.jpg" alt="Throne Chair" />
+        <h3>Velvet Throne Chair</h3>
+        <p>Current Bid: $1,200</p>
+        <a href="#" class="bid-button">Claim Your Throne</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 DYNASTY MERCANTILE. All rights reserved.</p>
+  </footer>
+
+  <script src="../scripts/crownGlow.js"></script>
+  <script src="../scripts/bidAlert.js"></script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Auctions | DYNASTY MERCANTILE</title>
+  <link rel="stylesheet" href="../styles/main.css" />
+  <script src="../scripts/countdown.js" defer></script>
+  <script src="../scripts/bidding.js" defer></script>
+</head>
+<body>
+  <header class="hero">
+    <h1>Throne-Worthy Auctions</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="dashboard.html">Dashboard</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="auction-listings">
+    <div class="auction-card">
+      <img src="../assets/images/throne-chair.jpg" alt="Velvet Throne Chair" />
+      <h3>Velvet Throne Chair</h3>
+      <p>Current Bid: $<span id="currentBid">1200</span></p>
+      <p>Ends in: <span id="time-left"></span></p>
+      <input type="number" id="newBid" placeholder="Your Offer" />
+      <button onclick="placeBid()">Place Bid</button>
+    </div>
+  </section>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login | DYNASTY MERCANTILE</title>
+  <link rel="stylesheet" href="../styles/main.css" />
+</head>
+<body>
+  <section class="login">
+    <h2>Enter the Court</h2>
+    <form id="loginForm">
+      <input type="email" id="email" placeholder="Royal Email" required />
+      <input type="password" id="password" placeholder="Secret Sigil" required />
+      <button type="submit">Enter</button>
+    </form>
+  </section>
+
+  <script src="../scripts/auth.js" type="module"></script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard | DYNASTY MERCANTILE</title>
+  <link rel="stylesheet" href="../styles/main.css" />
+</head>
+<body>
+  <header class="dashboard-header">
+    <h1>Welcome, Noble Bidder</h1>
+    <nav>
+      <ul>
+        <li><a href="auctions.html">Auctions</a></li>
+        <li><a href="index.html">Home</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="my-bids">
+    <h2>My Active Bids</h2>
+    <div class="bid-entry">
+      <p><strong>Velvet Throne Chair</strong> — $1,400</p>
+      <p>Status: Leading</p>
+    </div>
+  </section>
+
+  <section id="watchlist">
+    <h2>Watchlist</h2>
+    <ul>
+      <li>Mahogany Banquet Table</li>
+      <li>Gilded Mirror Cabinet</li>
+    </ul>
+  </section>
+
+  <section id="won-items">
+    <h2>Victories</h2>
+    <div class="won-entry">
+      <p><strong>Baroque Chaise Lounge</strong> — Won for $2,100</p>
+      <p>Payment: Completed</p>
+    </div>
+  </section>
+
+  <section id="profile">
+    <h2>Profile</h2>
+    <p>Name: Imman</p>
+    <p>Email: imman@dynastymercantile.com</p>
+    <button onclick="logout()">Log Out</button>
+  </section>
+
+  <script src="../scripts/dashboard.js"></script>
+</body>
+</html>
 
